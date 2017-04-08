@@ -16,3 +16,5 @@ Ladywell antiques is a website and mobile app that is to be developed to showcas
 ## License
 
 Apache-2.0
+
+<img align='right' src="http://forthebadge.com/images/badges/built-with-love.svg" />
