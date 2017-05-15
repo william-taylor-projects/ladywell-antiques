@@ -10,9 +10,9 @@ app.use(bodyParser.json());
 app.use(compression());
 app.use(cors());
 app.get('/', (req, res) => {
-  res.send('Hello User!')
+    res.send('Hello User!')
 })
 
 app.listen(8080, () => {
-  console.log('Ladywell Antiques Server Running!')
+    console.log('Ladywell Antiques Server Running!')
 })

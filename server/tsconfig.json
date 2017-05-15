@@ -1,10 +1,10 @@
 {
     "compilerOptions": {
+        "typeRoots": [ "node_modules/@types" ],
         "target": "es6",
         "module": "commonjs",
         "moduleResolution": "node",
-        "outDir": "build",
-        "typeRoots": [ "node_modules/@types" ]
+        "outDir": "build"
     },
     "exclude": [
         "node_modules"
