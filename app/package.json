@@ -1,10 +1,6 @@
 {
   "name": "angular-quickstart",
   "version": "1.0.0",
-  "scripts": {
-    "start": "npm run lite",
-    "lite": "lite-server"
-  },
   "license": "MIT",
   "dependencies": {
     "@angular/common": "~2.4.0",
@@ -26,5 +22,11 @@
     "lite-server": "^2.2.2",
     "typescript": "^2.3.2",
     "typings": "^2.1.1"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run tscwatch\" \"npm run lite\" ",
+    "lite": "lite-server",
+    "tscwatch": "tsc -w",
+    "tsc": "tsc"
   }
 }
