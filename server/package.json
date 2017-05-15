@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node build/app.js",
-    "build": "npm run tsc",
+    "test": "echo \"Error: no tests yet written\" && exit 0",
+    "start": "node build/server.js",
+    "build": "tsc",
     "tsc": "tsc"
   },
   "devDependencies": {
@@ -15,6 +15,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/node": "^7.0.18",
+    "body-parser": "^1.17.1",
+    "compression": "^1.6.2",
+    "cors": "^2.8.3",
     "express": "^4.15.2"
   }
 }
