@@ -41,3 +41,5 @@ app/app/**/*.js
 app/app/**/*.js.map
 app/build/**/*.js
 app/build/**/*.js.map
+
+server/build/**/*.js
