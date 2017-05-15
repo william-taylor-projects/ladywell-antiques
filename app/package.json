@@ -20,15 +20,10 @@
   },
   "devDependencies": {
     "concurrently": "^3.0.0",
-    "lite-server": "^2.2.2",
-    "typescript": "^2.3.2",
-    "typings": "^2.1.1"
+    "lite-server": "^2.2.2"
   },
   "scripts": {
-    "start": "concurrently \"npm run tscwatch\" \"npm run lite\" ",
-    "lite": "lite-server",
-    "tscwatch": "npm run tsc -w",
-    "tsc": "tsc",
-    "typings": "typings"
+    "start": "concurrently \"tsc -w\" \"npm run lite\" ",
+    "lite": "lite-server"
   }
 }
