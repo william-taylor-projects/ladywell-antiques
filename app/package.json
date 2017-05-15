@@ -21,8 +21,9 @@
   "devDependencies": {
     "concurrently": "^3.0.0",
     "lite-server": "^2.2.2",
-    "typescript": "^2.3.2", 
-    "typings": "^2.1.1"
+    "typescript": "^2.3.2",
+    "@types/es6-collections": "^0.5.30",
+    "@types/es6-promise": "0.0.32"
   },
   "scripts": {
     "start": "concurrently \"npm run tscwatch\" \"npm run lite\" ",
