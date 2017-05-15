@@ -37,7 +37,7 @@ jspm_packages
 .node_repl_history
 
 # Custom
-app/app/*.js
-app/app/*.js.map
-app/build/*.js
-app/build/*.js.map
+app/app/**/*.js
+app/app/**/*.js.map
+app/build/**/*.js
+app/build/**/*.js.map

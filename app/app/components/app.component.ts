@@ -4,7 +4,7 @@ import { Model, TodoItem } from "../model/app.model";
 
 @Component({
     selector: "todo-app",
-    templateUrl: 'app/app.component.html'
+    templateUrl: 'app/components/app.component.html'
 })
 export class AppComponent {
     model = new Model();

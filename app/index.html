@@ -25,7 +25,7 @@
           "@angular/*": "./node_modules/@angular/*"
         }
 
-        var packages = {"app": {}}
+        var packages = {"build": {}}
         var angularModules = ["common", "compiler", "core", "forms", "platform-browser", "platform-browser-dynamic"]
         angularModules.forEach(function(pkg) {
           packages["@angular/" + pkg] = {
@@ -34,7 +34,7 @@
         });
 
         System.config({ paths: paths, packages: packages });
-        System.import("app/app.boot").catch(function(err) {
+        System.import("build/app.boot").catch(function(err) {
           console.error(err);
         });
     </script>
