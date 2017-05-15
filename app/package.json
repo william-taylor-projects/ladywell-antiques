@@ -1,5 +1,5 @@
 {
-  "name": "angular-quickstart",
+  "name": "ladywell-antiques",
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
@@ -26,7 +26,7 @@
   "scripts": {
     "start": "concurrently \"npm run tscwatch\" \"npm run lite\" ",
     "lite": "lite-server",
-    "tscwatch": "tsc -w",
+    "tscwatch": "npm run tsc -w",
     "tsc": "tsc"
   }
 }
