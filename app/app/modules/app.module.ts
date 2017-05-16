@@ -4,7 +4,8 @@ import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 import { RouterModule } from '@angular/router';
 
-import { App } from "../components/app";
+import { App } from "../components/app.component";
+import { Nav } from "../components/nav.component";
 
 let routes = RouterModule.forChild([
     { path: 'home', component: App },
@@ -13,8 +14,8 @@ let routes = RouterModule.forChild([
 
 @NgModule({
     imports: [BrowserModule, FormsModule, routes],
-    declarations: [App],
-    bootstrap: [App]
+    declarations: [App, Nav],
+    bootstrap: [App, Nav]
 })
 export class AppModule {
 
