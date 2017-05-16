@@ -7,19 +7,19 @@
     <div class="collapse navbar-collapse" id="my-navbar">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active pull-xs-right">
-                <a class="nav-link" href="#" (click)="home()">Home<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#" [routerLink]="['/']">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" (click)="gallery()">Gallery</a>
+                <a class="nav-link" href="#" [routerLink]="['/gallery']">Gallery</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" (click)="items()">Buy Items</a>
+                <a class="nav-link" href="#" [routerLink]="['/items']">Buy Items</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" (click)="reviews()">Reviews</a>
+                <a class="nav-link" href="#" [routerLink]="['/reviews']">Reviews</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" (click)="contact()">Contact Us</a>
+                <a class="nav-link" href="#" [routerLink]="['/contact']">Contact Us</a>
             </li>
         </ul>
     </div>
