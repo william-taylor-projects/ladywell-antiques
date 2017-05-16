@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Ladywell Antiques</title>
+    <title>Welcome</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="utf-8">
 
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel='stylesheet' href='styles/styles.css'>
     <link rel="icon" href="icon.png">
 
     <!-- Angular Dependencies -->
@@ -15,10 +16,38 @@
     <script src='./node_modules/zone.js/dist/zone.min.js'></script> <!-- Zones dependency  -->
     <script src='./node_modules/reflect-metadata/Reflect.js'></script> <!-- Reflect polyfill -->
     <script src='./node_modules/systemjs/dist/system.src.js'></script> <!-- Module loader -->
-  </head>
-  <body class='container-fluid mt-2'>
-    <todo-app>Loading...</todo-app>
 
+  </head>
+  <body>
+    <div class='container-fixed'>
+      <img class='cover-page' src='images/background.jpg'>
+    </div>
+    
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-transparent">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Ladywell Antiques</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active pull-xs-right">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Gallery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Buy Items</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+    <!--<todo-app>Loading...</todo-app>
     <script>
         var paths = {
           "rxjs/*": "./node_modules/rxjs/bundles/Rx.min.js",
@@ -38,5 +67,6 @@
           console.error(err);
         });
     </script>
+    -->
   </body>
 </html>
