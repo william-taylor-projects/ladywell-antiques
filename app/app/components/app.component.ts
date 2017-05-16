@@ -7,5 +7,5 @@ import { RouterModule } from '@angular/router';
     templateUrl: 'app/components/app.component.html'
 })
 export class App {
-
+    
 }

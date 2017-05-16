@@ -2,23 +2,29 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { App } from "../components/app.component";
 import { Nav } from "../components/nav.component";
 import { Home } from '../components/home.component';
+import { Gallery } from '../components/gallery.component';
+import { HttpModule } from '@angular/http';
 
-let routes = RouterModule.forRoot([
-    { path: '', component: App },
+let routes: Routes = [
+    { path: '', component: Home },
+    { path: 'gallery', component: Gallery },
     { path: '**', redirectTo: '' }
-])
-
-console.log(routes);
+]
 
 @NgModule({
-    imports: [BrowserModule, FormsModule],
-    declarations: [App, Nav],
-    bootstrap: [App, Nav]
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        RouterModule.forRoot(routes)
+    ],
+    declarations: [App, Home, Gallery, Nav],
+    bootstrap: [App]
 })
 export class AppModule {
 

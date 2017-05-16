@@ -3,29 +3,32 @@
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
-    "@angular/common": "^2.2.0",
-    "@angular/compiler": "^2.2.0",
-    "@angular/core": "^2.2.0",
-    "@angular/forms": "^2.2.0",
-    "@angular/http": "^2.2.0",
-    "@angular/platform-browser": "^2.2.0",
-    "@angular/platform-browser-dynamic": "^2.2.0",
-    "@angular/router": "3.2.0",
+    "@angular/common": "4.0.0",
+    "@angular/compiler": "4.0.0",
+    "@angular/compiler-cli": "4.0.0",
+    "@angular/core": "4.0.0",
+    "@angular/forms": "4.0.0",
+    "@angular/http": "4.0.0",
+    "@angular/platform-browser": "4.0.0",
+    "@angular/platform-browser-dynamic": "4.0.0",
+    "@angular/router": "4.0.0",
+    "@angular/tsc-wrapped": "4.0.0",
+    "@angular/upgrade": "4.0.0",
+    "@angular/platform-server": "4.0.0",
+    "@angular/animations": "4.0.0",
+   
+    "systemjs": "0.19.47",
+    "core-js": "2.4.1",
+    "rxjs": "5.2.0",
+    "zone.js": "0.8.5",
+
     "bootstrap": "4.0.0-alpha.6",
-    "classlist.js": "^1.1.20150312",
-    "core-js": "^2.4.1",
-    "font-awesome": "^4.7.0",
-    "reflect-metadata": "^0.1.8",
-    "rxjs": "^5.4.0",
-    "systemjs": "^0.19.40",
-    "zone.js": "^0.6.26"
+    "font-awesome": "^4.7.0"
   },
   "devDependencies": {
     "concurrently": "^3.0.0",
     "lite-server": "^2.2.2",
-    "typescript": "^2.3.2",
-    "@types/es6-collections": "^0.5.30",
-    "@types/es6-promise": "0.0.32"
+    "typescript": "^2.3.2"
   },
   "scripts": {
     "start": "concurrently \"npm run tscwatch\" \"npm run lite\" ",
