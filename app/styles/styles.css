@@ -16,6 +16,11 @@
     color: black;
 }
 
+#header {
+    font-size: 2.75em;
+    font-weight: 600;
+}
+
 .div.center-vertical {
    height: 10em;
    position: relative 
@@ -111,6 +116,7 @@ div.center-vertical p {
     text-decoration: none !important;
     background-color: rgba(158, 150, 150, 0.38) !important;
     border-color: white;
+    cursor: pointer;
 }
 
 .btn-link {
