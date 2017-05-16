@@ -31,7 +31,7 @@
         }
 
         var packages = {"build": {}}
-        var angularModules = ["common", "compiler", "core", "forms", "platform-browser", "platform-browser-dynamic"]
+        var angularModules = ["common", "compiler", "core", "forms", "platform-browser", "platform-browser-dynamic", "router"]
         angularModules.forEach(function(pkg) {
           packages["@angular/" + pkg] = {
             main: "/bundles/" + pkg + ".umd.min.js"
