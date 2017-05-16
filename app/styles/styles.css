@@ -5,6 +5,41 @@
     -o-background-size: cover;
     background-size: cover;
     position: fixed;
+    z-index:-500;
+    min-width: 100%;
+}
+
+#location {
+    letter-spacing: 0;
+    font-size: 70%;
+    text-shadow: white 2px 2px 0px;
+    color: black;
+}
+
+.div.center-vertical {
+   height: 10em;
+   position: relative 
+}              
+
+div.center-vertical p {
+   margin: 0;
+   position: absolute;               
+   top: 45%;                         
+   transform: translate(0, -50%) 
+}   
+
+.fixed-canvas {
+     height: 300px;
+}
+
+.header-page {
+    letter-spacing: 0.075em;
+    color: white;
+    font-weight: 100;
+    text-align: center;
+    font-size: 1.3em;
+    padding: 0 20% 0 20%;
+    text-shadow: #000000 2px 2px 2px;
 }
 
 .bg-inverse {
@@ -14,14 +49,14 @@
 .loader,
 .loader:before,
 .loader:after {
-    background: #4289f4;
+    background: #333;
     -webkit-animation: load1 1s infinite ease-in-out;
     animation: load1 1s infinite ease-in-out;
     width: 1em;
     height: 4em;
 }
 .loader {
-    color: #4289f4;
+    color: #333;
     text-indent: -9999em;
     margin: 88px auto;
     position: relative;
@@ -69,4 +104,18 @@
     box-shadow: 0 -2em;
     height: 5em;
     }
+}
+
+.btn-link:focus, .btn-link:hover {
+    color: #fff !important;
+    text-decoration: none !important;
+    background-color: rgba(158, 150, 150, 0.38) !important;
+    border-color: white;
+}
+
+.btn-link {
+    font-weight: normal;
+    color: #fff;
+    border-radius: 5;
+    border-color: #ddd;
 }
