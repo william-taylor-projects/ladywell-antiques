@@ -1,4 +1,4 @@
-.cover-page {
+.fill-canvas {
     height: 100vh;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -7,8 +7,8 @@
     position: fixed;
 }
 
-.bg-transparent {
-    background-color: rgba(0, 0, 0, 0);
+.bg-inverse {
+    background-color: rgba(0, 0, 0, 0) !important;
 }
 
 .loader,
