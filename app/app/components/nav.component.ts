@@ -7,7 +7,10 @@ import { Router } from '@angular/router';
     templateUrl: 'app/components/nav.component.html'
 })
 export class Nav {
-    constructor() {
-
+    get color()  {
+        if(window.location.pathname == '/home')
+            return 'rgba(55, 55, 55, 0.5)';
+        else 
+            return 'rgb(161, 178, 206)';
     }
 }

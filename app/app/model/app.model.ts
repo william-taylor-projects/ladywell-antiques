@@ -1,4 +1,12 @@
 
+export class Item {
+    title: string;
+    description: {
+        short: string;
+        long: string;
+    }
+}
+
 export class TodoItem {
     action: string;
     done: boolean;
