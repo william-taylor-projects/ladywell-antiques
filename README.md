@@ -1,7 +1,7 @@
 
 <img src='preview.gif' />
 
-<img width='150' height='150' src='app/icon.png' align='right' />
+<img width='150' height='150' src='icon.png' align='right' />
 
 # Ladywell Antiques &nbsp; [![Build status](https://travis-ci.org/william-taylor/ladywell-antiques.svg?branch=master)](https://travis-ci.org/william-taylor/ladywell-antiques) [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
