@@ -17,7 +17,6 @@ let routes: Routes = [
     { path: 'home', component: Home },
     { path: 'gallery', component: Gallery },
     { path: 'items', component: Items },
-    { path: 'reviews', component: Reviews },
     { path: 'contact', component: Contact },
     { path: '**', redirectTo: 'home' }
 ]
@@ -29,7 +28,7 @@ let routes: Routes = [
         HttpModule,
         RouterModule.forRoot(routes)
     ],
-    declarations: [App, Home, Gallery, Items, Reviews, Contact, Nav],
+    declarations: [App, Home, Gallery, Items, Contact, Nav],
     bootstrap: [App]
 })
 export class AppModule {

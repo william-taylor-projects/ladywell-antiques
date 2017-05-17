@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 export class Nav {
     get color()  {
         if(window.location.pathname == '/home')
-            return 'rgba(55, 55, 55, 0.5)';
+            return 'tranparent';
         else 
-            return 'rgb(161, 178, 206)';
+            return '#81776d';//'#99836c'// '#333';
     }
 }

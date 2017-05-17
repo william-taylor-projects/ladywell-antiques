@@ -1,8 +1,14 @@
-<nav class="navbar navbar-toggleable-sm navbar-light" [style.background]="color">
+<nav class="navbar navbar-toggleable-sm navbar-inverse mb-4" [style.background]="color">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#my-navbar">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">Ladywell Antiques</a>
+   
+    <a class="navbar-brand" href="#">
+    <img src="icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+     Ladywell Antiques
+  </a>
+
+<!--  <h1 class="navbar-brand mb-0" style='font-weight: 100;'>Ladywell Antiques</h1>-->
 
     <div class="collapse navbar-collapse" id="my-navbar">
         <ul class="navbar-nav ml-auto">
@@ -16,10 +22,7 @@
                 <a class="nav-link" href="#" routerLink="/gallery" routerLinkActive="active">Gallery</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#" routerLink="/reviews" routerLinkActive="active">Reviews</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" routerLink="/contact" routerLinkActive="active">Contact Us</a>
+                <a class="nav-link" href="#" routerLink="/contact" routerLinkActive="active">Contact</a>
             </li>
         </ul>
     </div>

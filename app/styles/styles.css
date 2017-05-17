@@ -9,6 +9,15 @@
     min-width: 100%;
 }
 
+body {
+    font-family:  'Muli', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #292b2c;
+    background-color: #fff;
+}
+
 #location {
     letter-spacing: 0;
     font-size: 70%;
