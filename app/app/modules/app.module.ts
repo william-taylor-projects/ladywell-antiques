@@ -14,12 +14,12 @@ import { Contact } from '../components/contact.component';
 import { HttpModule } from '@angular/http';
 
 let routes: Routes = [
-    { path: '', component: Home },
+    { path: 'home', component: Home },
     { path: 'gallery', component: Gallery },
     { path: 'items', component: Items },
     { path: 'reviews', component: Reviews },
     { path: 'contact', component: Contact },
-    { path: '**', redirectTo: '' }
+    { path: '**', redirectTo: 'home' }
 ]
 
 @NgModule({

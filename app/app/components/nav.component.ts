@@ -10,24 +10,4 @@ export class Nav {
     constructor() {
 
     }
-
-    home() {
-        console.log('Home');
-    }
-
-    gallery() {
-        console.log('Gallery');
-    }
-
-    items() {
-        console.log('Items');
-    }
-
-    reviews() {
-        console.log('Reviews');
-    }
-
-    contact() {
-        console.log('Contact');
-    }
 }

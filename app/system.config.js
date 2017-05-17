@@ -29,3 +29,6 @@ function packUmd(pkgName) {
 var setPackageConfig = packUmd;
 ngPackageNames.forEach(setPackageConfig);
 System.config({ map: map, packages: packages });
+System.import("build/app.boot").catch(function(err) {
+    console.error(err);
+});
