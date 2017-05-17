@@ -2,11 +2,37 @@
     <nav-bar></nav-bar>
     <div class='container'>
         <div class='row mt-4'>
-            <div class='col-md-6'>
-                Google Map
-            </div>
-             <div class='col-md-6'>
-                 Contact Form
+            <div class='col-md-8 offset-md-2'>
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Name</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Email</label>
+                        <input class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleTextarea">Message</label>
+                        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                    </div>
+                    <fieldset class="form-group">
+                        <legend>Reason</legend>
+                        <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            Your website is awesome!
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <label class="form-check-label">
+                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                            Your website sucks!
+                        </label>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
             </div>
         </div>
     </div>
