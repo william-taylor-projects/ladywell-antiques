@@ -1,18 +1,16 @@
 {
   "name": "ladywell-antiques-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend for Ladywell Antiques Web App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no tests yet written\" && exit 0",
-    "start": "node build/server.js",
-    "build": "tsc",
-    "tsc": "tsc"
+    "test": "echo \"No tests written\" && exit 0",
+    "start": "tsc && node build/server.js"
   },
   "devDependencies": {
     "typescript": "^2.3.2"
   },
-  "author": "",
+  "author": "William Taylor",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^7.0.18",
