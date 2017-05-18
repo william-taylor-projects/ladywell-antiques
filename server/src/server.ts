@@ -3,8 +3,11 @@ import * as compression from 'compression';
 import * as bodyParser from 'body-parser';
 import * as express from 'express';
 import * as cors from 'cors';
+import * as metrics from 'appmetrics-dash';
 
+const dash = metrics.monitor();
 const app = express()
+
 app.use(express.static(__dirname, { maxAge: '7d' }));
 app.use(bodyParser.json());
 app.use(compression());

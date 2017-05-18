@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/node": "^7.0.18",
+    "appmetrics-dash": "^3.1.0",
     "body-parser": "^1.17.1",
     "compression": "^1.6.2",
     "cors": "^2.8.3",
