@@ -15,17 +15,9 @@ import { NgModule } from "@angular/core";
         RouterModule.forRoot(RouteRoutes),
         NgbModule.forRoot(),
         BrowserModule,
-        FormsModule,
         AdminModule,
-        HttpModule,
     ],
-    declarations: [
-        App,
-        Home,
-        Gallery,
-        Items,
-        Contact
-    ],
+    declarations: [App, Home, Gallery, Items, Contact],
     bootstrap: [App]
 })
 export class AppModule {
