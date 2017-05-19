@@ -7,10 +7,16 @@ import { Router } from '@angular/router';
     templateUrl: 'app/components/nav.component.html'
 })
 export class Nav {
+    isNavbarCollapsed: boolean;
+
+    constructor() {
+        this.isNavbarCollapsed = true;
+    }
+
     get color()  {
         if(window.location.pathname == '/home')
-            return 'tranparent';
+            return 'rgba(0, 0, 0, 0.25)';
         else 
-            return '#81776d';//'#99836c'// '#333';
+            return '#81776d';
     }
 }

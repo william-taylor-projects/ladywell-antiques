@@ -1,8 +1,9 @@
 
 var map = {
-    'build': 'build', 
     '@angular': 'node_modules/@angular',
-    'rxjs': 'node_modules/rxjs'
+    '@ng-bootstrap/ng-bootstrap': 'node_modules/@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js', 
+    'rxjs': 'node_modules/rxjs',
+    'build': 'build'
 };
 
 var packages = {

@@ -13,6 +13,7 @@ import { Admin } from '../components/admin.component';
 import { Login } from '../components/login.component';
 import { Contact } from '../components/contact.component';
 import { HttpModule } from '@angular/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 let routes: Routes = [
     { path: 'home', component: Home },
@@ -26,6 +27,7 @@ let routes: Routes = [
 
 @NgModule({
     imports: [
+        NgbModule.forRoot(),
         BrowserModule,
         FormsModule,
         HttpModule,

@@ -26,8 +26,13 @@ body {
 }
 
 #header {
-    font-size: 2.75em;
+    font-size: 2.0em;
     font-weight: 600;
+}
+
+#text {
+    font-size: 1.0em;
+    font-weight: 300;
 }
 
 .div.center-vertical {
@@ -52,7 +57,7 @@ div.center-vertical p {
     font-weight: 100;
     text-align: center;
     font-size: 1.3em;
-    padding: 0 20% 0 20%;
+    padding: 0 5% 0 5%;
     text-shadow: #000000 2px 2px 2px;
 }
 
