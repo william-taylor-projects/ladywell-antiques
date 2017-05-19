@@ -3,7 +3,7 @@
 
     <div class='container-fluid mt-4'>
         <div class='row'>
-            <div class='col-md-4'>
+            <div class='col-md-4 hidden-sm-down'>
                 <ul class="list-group">
                     <li class="list-group-item justify-content-between">
                         Catagory 1
@@ -23,14 +23,16 @@
                     </li>
                 </ul>
             </div>
-            <div class='col-md-8'>
+            <div class='col-md-8 col-12'>
                 <div *ngFor="let item of items; let i = index;">
-                    <div class="card" style="width: 20rem;">
-                        <img class="card-img-top img-fluid" src="images/silver.jpg" alt="Card image cap">
-                        <div class="card-block">
-                            <h4 class="card-title">Product</h4>
-                            <p class="card-text">Short description about what this product is and then a model should open.</p>
-                            <a href="#" class="btn btn-primary">View</a>
+                    <div class='col-md-6 col-12'>
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="images/silver.jpg" alt="Card image cap">
+                            <div class="card-block">
+                                <h4 class="card-title">Product</h4>
+                                <p class="card-text">Short description about what this product is and then a model should open.</p>
+                                <a href="" class="btn btn-primary">View</a>
+                            </div>
                         </div>
                     </div>
                 </div>
