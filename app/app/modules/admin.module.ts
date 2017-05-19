@@ -1,11 +1,10 @@
 
-import { AdminRoutes } from "../model/app.routes";
-import { NgModule } from "@angular/core";
-import { RouterModule } from "@angular/router";
-import { Admin } from '../components/admin.component';
-import { Login } from '../components/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { Nav } from "../components/nav.component";
+import { RouterModule } from "@angular/router";
+import { NgModule } from "@angular/core";
+
+import { Admin, Login, Nav } from '../components/all.components';
+import { AdminRoutes } from "../model/app.routes";
 
 @NgModule({
     imports: [
