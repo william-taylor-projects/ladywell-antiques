@@ -19,7 +19,7 @@ export let Home = home;
 export let App = app;
 export let Nav = nav;
 
-export let coreModules = () => {
+export let components = () => {
     return [
         App,
         Nav,
@@ -31,7 +31,7 @@ export let coreModules = () => {
     ]
 }
 
-export let adminModules = () => {
+export let adminComponents = () => {
     return [
         Admin,
         AdminNav

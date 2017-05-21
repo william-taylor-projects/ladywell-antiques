@@ -5,7 +5,7 @@
         <div class='row'>
             <div class='col-md-4 hidden-sm-down'>
                 <ul class="list-group">
-                    <li *ngFor="let category of getCategories();" style='cursor: pointer;' (click)='filter(category)' class="list-group-item list-group-item-action justify-content-between">
+                    <li *ngFor="let category of getCategories()" style='cursor: pointer;' (click)='onSelected(category)' class="list-group-item list-group-item-action justify-content-between">
                         {{category.name}}
                         <span class="badge badge-default badge-pill">{{getCategoryCount(category)}}</span>
                     </li>
@@ -13,7 +13,7 @@
             </div>
             <div class='col-md-8'>
                 <div class='row card-group'>
-                    <div class="col-md-6 mb-4" *ngFor="let item of getItems();">
+                    <div class="col-md-6 mb-4" *ngFor="let item of getItems() | byCategory:selectedCategory">
                         <div class="card">
                             <img class="card-img-top img-fluid" src="{{item.img}}">
                             <div class="card-block">

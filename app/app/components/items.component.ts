@@ -7,12 +7,14 @@ import { Component } from "@angular/core";
     templateUrl: 'app/components/items.component.html'
 })
 export class Items {
+    selectedCategory: Category = null;
+
     constructor(private model: Model) {
        // ...
     }
 
-    filter(category: Category) {
-        alert('Filter time!');
+    onSelected(category: Category) {
+        this.selectedCategory = category;
     }
 
     getCategoryCount(cat: Category) : number {
