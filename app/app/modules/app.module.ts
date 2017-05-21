@@ -1,7 +1,8 @@
 
-import { App, coreModules } from '../components/all.components';
+import { App, coreModules } from '../all.components';
+import { AdminModule } from '../all.modules';
+
 import { RouteRoutes, AdminRoutes } from '../model/app.routes';
-import { AdminModule } from './all.modules';
 
 import { BrowserModule } from "@angular/platform-browser";
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';

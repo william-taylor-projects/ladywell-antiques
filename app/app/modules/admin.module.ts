@@ -3,8 +3,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from "@angular/router";
 import { NgModule } from "@angular/core";
 
-import { adminModules } from '../components/all.components';
 import { AdminRoutes } from "../model/app.routes";
+import { adminModules } from '../all.components';
 
 @NgModule({
     imports: [
