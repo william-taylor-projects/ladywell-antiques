@@ -1,3 +1,5 @@
+
+import { Model, Category, Item } from '../model/app.model';
 import { Component } from "@angular/core";
 
 @Component({
@@ -5,13 +7,19 @@ import { Component } from "@angular/core";
     templateUrl: 'app/components/items.component.html'
 })
 export class Items {
-    items: any[];
-
-    constructor() {
-        this.items = [{}];
+    constructor(private model: Model) {
+       // ...
     }
 
-    getItems() : any[] {
-        return this.items;
+    getCategoryCount(cat: Category) : number {
+        return this.model.itemsWithCategory(cat);
+    }
+
+    getCategories() : Category[] {
+        return this.model.categories;
+    }
+
+    getItems() : Item[] {
+        return this.model.items;
     }
 }

@@ -7,11 +7,24 @@ import { Router } from "@angular/router";
     templateUrl: 'app/components/login.component.html'
 })
 export class Login {
-    constructor(private router: Router) {
+    private username: string;
+    private password: string;
 
+    constructor(private router: Router) {
+        
+    }
+
+    onUserKey(value: string) {
+        this.username = value;
+    }
+
+    onPswKey(value: string) {
+        this.password = value;
     }
 
     login() {
-        this.router.navigate(['/admin']);
+        if(this.username == 'admin' && this.password == 'secret') {
+            this.router.navigate(['/admin']);
+        }
     }
 }

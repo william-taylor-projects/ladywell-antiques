@@ -4,11 +4,11 @@
         <h1 class='mb-4'>Admin Login</h1>
         <div class="form-group">
             <label for="formGroupExampleInput">Username:</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+            <input #usr (keyup)="onUserKey(usr.value)" type="text" class="form-control" id="formGroupExampleInput" placeholder="">
         </div>
         <div class="form-group">
             <label for="formGroupExampleInput2">Password:</label>
-            <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="">
+            <input #psd (keyup)="onPswKey(psd.value)" type="password" class="form-control" id="formGroupExampleInput2" placeholder="">
         </div>
         <button (click)="login()" class="btn btn-default">Login</button>
     </form>
