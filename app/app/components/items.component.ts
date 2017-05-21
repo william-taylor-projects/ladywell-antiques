@@ -18,7 +18,11 @@ export class Items {
     }
 
     getCategoryCount(cat: Category) : number {
-        return this.model.itemsWithCategory(cat);
+        if(cat.wildcard) {
+            return this.getItems().length;
+        } else {
+            return this.model.itemsWithCategory(cat);
+        }
     }
 
     getCategories() : Category[] {

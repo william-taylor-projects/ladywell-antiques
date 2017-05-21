@@ -7,10 +7,12 @@ const randomElement = <T>(items: any[T]): T => {
 
 export class Category {
     uniqueIdentifier: number;
+    wildcard: boolean;
     name: string;
 
-    constructor(id: number, nm: string) {
+    constructor(id: number, nm: string, wildcard?: boolean) {
         this.uniqueIdentifier = id;
+        this.wildcard = wildcard;
         this.name = nm;
     }
 }
@@ -62,6 +64,7 @@ export class Model {
     constructor() {
         this.categories = randomCategories();
         this.items = randomItems(6, this.categories);
+        this.categories.push(new Category(this.categories.length, "All", true));
     }
 
     itemsWithCategory(category: Category) {
