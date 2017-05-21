@@ -3,7 +3,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { RouterModule } from "@angular/router";
 import { NgModule } from "@angular/core";
 
-import { Admin, Login, Nav } from '../components/all.components';
+import { adminModules } from '../components/all.components';
 import { AdminRoutes } from "../model/app.routes";
 
 @NgModule({
@@ -11,8 +11,8 @@ import { AdminRoutes } from "../model/app.routes";
         RouterModule.forChild(AdminRoutes),
         NgbModule
     ],
-    declarations: [Nav, Admin, Login],
-    exports: [Nav]
+    declarations: adminModules(),
+    exports: []
 })
 export class AdminModule {
 

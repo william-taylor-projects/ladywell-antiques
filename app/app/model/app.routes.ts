@@ -8,11 +8,11 @@ export const RouteRoutes: Routes = [
     { path: 'gallery', component: Gallery },
     { path: 'items', component: Items },
     { path: 'contact', component: Contact },
+    { path: 'login', component: Login },
     { path: '**', redirectTo: 'home' }
 ];
 
 export const AdminRoutes: Routes = [
-    { path: 'admin', component: Admin },
-    { path: 'login', component: Login }
+    { path: 'admin', component: Admin }
 ];
 

@@ -1,5 +1,5 @@
 
-import { App, Home, Gallery, Items, Contact } from '../components/all.components';
+import { App, coreModules } from '../components/all.components';
 import { RouteRoutes, AdminRoutes } from '../model/app.routes';
 import { AdminModule } from './all.modules';
 
@@ -17,7 +17,7 @@ import { NgModule } from "@angular/core";
         BrowserModule,
         AdminModule,
     ],
-    declarations: [App, Home, Gallery, Items, Contact],
+    declarations: coreModules(),
     bootstrap: [App]
 })
 export class AppModule {
