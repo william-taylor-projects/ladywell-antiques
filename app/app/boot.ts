@@ -7,5 +7,5 @@ if (location.hostname === "localhost" || location.hostname === "127.0.0.1") {
     enableProdMode();
 }
 
-let platform = platformBrowserDynamic();
+const platform = platformBrowserDynamic();
 platform.bootstrapModule(AppModule);

@@ -11,6 +11,10 @@ export class Items {
        // ...
     }
 
+    filter(category: Category) {
+        alert('Filter time!');
+    }
+
     getCategoryCount(cat: Category) : number {
         return this.model.itemsWithCategory(cat);
     }
