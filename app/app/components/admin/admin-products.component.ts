@@ -9,4 +9,12 @@ export class Products {
     constructor() {
 
     }
+
+    get products() {
+        return [
+            {},
+            {},
+            {}
+        ]
+    }
 }

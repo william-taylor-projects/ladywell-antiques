@@ -1,19 +1,25 @@
 
 import { Injectable } from "@angular/core";
 
-class GalleryImage {
-    name: string;
-    desc: string;
-    src: string;
+export class GalleryImage {
+    constructor(public name: string, public src: string) {
+        // ...
+    }
 }
 
 @Injectable()
 export class GalleryService {
-    constructor() {
+    private images: GalleryImage[];
 
+    constructor() {
+        this.images = [
+            new GalleryImage("Name", "images/placeholder.png"),
+            new GalleryImage("Name", "images/placeholder.png"),
+            new GalleryImage("Name", "images/placeholder.png")
+        ]
     }
 
-    getImages() : GalleryImage[] {
-        return [];
+    getImages(): GalleryImage[] {
+        return this.images;
     }
 }
