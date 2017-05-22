@@ -7,6 +7,8 @@ import { Component } from "@angular/core";
 })
 export class Gallery {
     constructor(config: NgbCarouselConfig) {
+        config.interval = 10000;
+        config.keyboard = true;
         config.wrap = false;
     }
 }
