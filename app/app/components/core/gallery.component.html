@@ -5,7 +5,7 @@
             left: 0;
             top: 0;
             min-width: 100%;
-            height: 650px;
+            height: 600px;
             object-fit: cover;
         }
     </style>
@@ -58,7 +58,7 @@
         <div class="mt-4 row text-center text-lg-left">
             <div *ngFor='let image of images(); let i = index' class="col-lg-3 col-md-4 col-xs-6">
                 <a (click)='openImage(modal, i); false' href="" class="d-block mb-4 h-100">
-                    <img class="img-fluid img-thumbnail" src="{{image.src}}" alt="{{image.name}}">
+                    <img style="min-width: 100%; height: 200px;" class="img-fluid img-thumbnail" src="{{image.src}}" alt="{{image.name}}">
                 </a>
             </div>
         </div>

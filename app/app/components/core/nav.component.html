@@ -3,12 +3,10 @@
         <span class="navbar-toggler-icon"></span>
     </button>
    
-    <nav class="navbar">
-        <a (click)='accessDashboard(); false' class="navbar-brand" href="">
-            <img src="icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
-            <span class='ml-2'>Ladywell Antiques</span>
-        </a>
-    </nav>
+    <a (click)='accessDashboard(); false' class="navbar-brand" href="">
+        <img src="icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <span class='ml-2'>Ladywell Antiques</span>
+    </a>
 
     <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">

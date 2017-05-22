@@ -12,11 +12,16 @@ export class GalleryService {
     private images: GalleryImage[];
 
     constructor() {
-        this.images = [
-            new GalleryImage("Name", "images/placeholder.png"),
-            new GalleryImage("Name", "images/placeholder.png"),
-            new GalleryImage("Name", "images/placeholder.png")
-        ]
+        this.images = [];
+
+        for(let i = 0; i < 3; i++) {
+            this.images = this.images.concat([
+                new GalleryImage("Vase", "images/image1.jpg"),
+                new GalleryImage("Owls", "images/image2.jpg"),
+                new GalleryImage("Cup", "images/image3.jpg"),
+                new GalleryImage("Bowl", "images/image4.jpg")
+            ]);
+        }
     }
 
     getImages(): GalleryImage[] {

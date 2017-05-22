@@ -22,7 +22,7 @@ export class Gallery {
     
     openImage(modal: any, index: number) {
         this.selectedImage = this.images()[index];
-        this.modalService.open(modal);
+        this.modalService.open(modal, { size: 'lg' });
     }
 
     images(): GalleryImage[] {
