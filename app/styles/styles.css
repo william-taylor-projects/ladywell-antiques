@@ -179,6 +179,18 @@ div.center-vertical p {
 }
 
 #admin {
-    background: #313131;
+    background:#f1eeee;
     height:100vh;
+}
+
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 0px solid #eceeef;
 }
