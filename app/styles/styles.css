@@ -177,3 +177,8 @@ div.center-vertical p {
 .container-small, .container-large {
     max-width: 100%;
 }
+
+#admin {
+    background: #313131;
+    height:100vh;
+}

@@ -10,7 +10,9 @@ export class Items {
     selectedCategory: Category = null;
 
     constructor(private model: Model) {
-       // ...
+        this.selectedCategory = model.wildcardCategory();
+
+        console.log(this.selectedCategory, model.categories);
     }
 
     onSelected(category: Category) {

@@ -64,14 +64,26 @@ export class Model {
     constructor() {
         this.categories = randomCategories();
         this.items = randomItems(6, this.categories);
-        this.categories.push(new Category(this.categories.length, "All", true));
+        this.categories.unshift(new Category(this.categories.length, "All", true));
     }
 
-    itemsWithCategory(category: Category) {
+    itemsWithCategory(category: Category) : number {
         let occurances = 0;
         this.items.forEach(item => {
             occurances += item.category == category ? 1 : 0;
         });
         return occurances;
+    }
+
+    wildcardCategory() : Category {
+        let wildcard = null;
+
+        this.categories.forEach(category => {
+            if(category.wildcard) {
+                wildcard = category;
+            }
+        });
+
+        return wildcard;
     }
 }
