@@ -3,35 +3,21 @@
     <div class='container'>
         <div class='row mt-4'>
             <div class='col-md-8 offset-md-2'>
+                  <h1 class='mb-4'>Contact Us</h1>
                 <form>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Name</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <label>Name</label>
+                        <input #email type="email" class="form-control" placeholder="Enter email">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Email</label>
-                        <input class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <label>Email</label>
+                        <input #password class="form-control" placeholder="Password">
                     </div>
                     <div class="form-group">
-                        <label for="exampleTextarea">Message</label>
-                        <textarea class="form-control" id="exampleTextarea" rows="3" placeholder='Text'></textarea>
+                        <label>Message</label>
+                        <textarea #message  class="form-control" rows="3" placeholder='Text'></textarea>
                     </div>
-                    <fieldset class="form-group">
-                        <legend>Reason</legend>
-                        <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                            Your website is awesome!
-                        </label>
-                        </div>
-                        <div class="form-check">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
-                            Your website sucks!
-                        </label>
-                        </div>
-                    </fieldset>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button (click)='submit(email.value, password.value, message.value); false' class="btn btn-default">Submit</button>
                 </form>
             </div>
         </div>

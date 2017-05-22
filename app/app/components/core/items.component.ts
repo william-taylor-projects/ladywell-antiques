@@ -1,10 +1,10 @@
 
-import { Model, Category, Item } from '../model/app.model';
+import { Model, Category, Item } from '../../model/app.model';
 import { Component } from "@angular/core";
 
 @Component({
     selector: "items",
-    templateUrl: 'app/components/items.component.html'
+    templateUrl: 'app/components/core/items.component.html'
 })
 export class Items {
     selectedCategory: Category = null;

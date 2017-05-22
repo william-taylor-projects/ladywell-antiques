@@ -1,6 +1,6 @@
 <div id='login'>
     <nav-bar></nav-bar>
-    <form class='container mt-4'>
+    <form class='container-small m-auto p-4'>
         <h1 class='mb-4'>Admin Login</h1>
         <div class="form-group">
             <label for="formGroupExampleInput">Username:</label>
@@ -10,6 +10,6 @@
             <label for="formGroupExampleInput2">Password:</label>
             <input #psd (keyup)="onPswKey(psd.value)" type="password" class="form-control" id="formGroupExampleInput2" placeholder="">
         </div>
-        <button (click)="login()" class="btn btn-default">Login</button>
+        <button (click)="login(); false" class="btn btn-default">Login</button>
     </form>
 </div>
