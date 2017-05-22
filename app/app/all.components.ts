@@ -1,5 +1,6 @@
 
-import { Products as products } from './components/admin/admin-products.component';
+import { AdminProducts as adminProducts } from './components/admin/admin-products.component';
+import { AdminGallery as adminGallery } from './components/admin/admin-gallery.component';
 import { AdminNav as adminNav } from "./components/admin/admin-nav.component";
 import { Admin as admin } from './components/admin/admin.component';
 
@@ -13,7 +14,7 @@ import { App as app } from "./components/app.component";
 
 export let Contact = contact;
 export let AdminNav = adminNav;
-export let Products = products;
+export let Products = adminProducts;
 export let Gallery = gallery;
 export let Items = items;
 export let Admin = admin;
@@ -38,6 +39,7 @@ export let adminComponents = () => {
     return [
         Admin,
         AdminNav,
-        Products
+        adminProducts,
+        adminGallery
     ]
 }

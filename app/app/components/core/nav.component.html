@@ -1,12 +1,14 @@
-<nav class="navbar navbar-toggleable-sm navbar-inverse mb-3 navbar-main" [style.background]="color">
+<nav class="navbar navbar-fixed-top navbar-inverse navbar-toggleable-sm navbar-main" [style.background]="color">
     <button (click)="isNavbarCollapsed = !isNavbarCollapsed" class="navbar-toggler navbar-toggler-right hidden-md-up" type="button">
         <span class="navbar-toggler-icon"></span>
     </button>
    
-    <a (click)='accessDashboard(); false' class="navbar-brand" href="">
-        <img src="icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
-        <span class='ml-2'>Ladywell Antiques</span>
-    </a>
+    <nav class="navbar">
+        <a (click)='accessDashboard(); false' class="navbar-brand" href="">
+            <img src="icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            <span class='ml-2'>Ladywell Antiques</span>
+        </a>
+    </nav>
 
     <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">

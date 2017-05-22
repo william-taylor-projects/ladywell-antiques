@@ -2,7 +2,6 @@
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-
 import { adminComponents } from '../all.components';
 import { AdminRoutes } from "../model/app.routes";
 
@@ -12,6 +11,12 @@ import { FormsModule } from "@angular/forms";
 import { HttpModule } from '@angular/http';
 import { NgModule } from "@angular/core";
 
+import { Model } from '../model/app.model';
+import { services } from '../all.services';
+import { pipes } from '../all.pipes';
+
+const myProviders = services().concat([Model, NgbCarouselConfig]);
+
 @NgModule({
     imports: [
         RouterModule.forChild(AdminRoutes),
@@ -20,6 +25,7 @@ import { NgModule } from "@angular/core";
         HttpModule,
         NgbModule
     ],
+    providers: myProviders,
     declarations: adminComponents(),
     exports: []
 })
