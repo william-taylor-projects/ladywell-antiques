@@ -198,3 +198,17 @@ div.center-vertical p {
 .navbar-main {
     z-index: 100;
 }
+
+.img-cover {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+button:focus {
+    outline:0;
+}
+
+a:focus {
+    outline:0;
+}

@@ -40,11 +40,24 @@
             </div>
         </ng-template>
     </ngb-carousel>
+
+    <ng-template #modal let-c="close" let-d="dismiss">
+        <div class="modal-header">
+            <h4 class="modal-title">{{selectedImage.name}}</h4>
+            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div>
+            <img class="img-cover" src='{{selectedImage.src}}' />
+        </div>
+    </ng-template>
+
     <div class='container mt-4'>
         <h1>Gallery</h1><hr/>
         <div class="mt-4 row text-center text-lg-left">
             <div *ngFor='let image of images(); let i = index' class="col-lg-3 col-md-4 col-xs-6">
-                <a (click)='openImage(i); false' href="" class="d-block mb-4 h-100">
+                <a (click)='openImage(modal, i); false' href="" class="d-block mb-4 h-100">
                     <img class="img-fluid img-thumbnail" src="{{image.src}}" alt="{{image.name}}">
                 </a>
             </div>

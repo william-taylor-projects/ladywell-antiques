@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AdminGallery {
     constructor() {
+        // ...
+    }
 
+    delete() {
+        // TODO: delete image
+    }
+
+    add() {
+        // TODO: add image
     }
 }

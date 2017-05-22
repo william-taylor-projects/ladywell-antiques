@@ -1,6 +1,6 @@
 
 import { GalleryService, GalleryImage } from "../../services/gallery.service";
-import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Component } from "@angular/core";
 
 @Component({
@@ -10,15 +10,19 @@ import { Component } from "@angular/core";
 export class Gallery {
     private selectedImage: GalleryImage;
 
-    constructor(private gallery: GalleryService, config: NgbCarouselConfig) {
+    constructor(
+        private gallery: GalleryService, 
+        private config: NgbCarouselConfig,
+        private modalService: NgbModal
+    ) {
         config.interval = 10000;
         config.keyboard = true;
         config.wrap = false;
     }
     
-    openImage(index: number) {
+    openImage(modal: any, index: number) {
         this.selectedImage = this.images()[index];
-        console.log('Selected Image: ', index);
+        this.modalService.open(modal);
     }
 
     images(): GalleryImage[] {

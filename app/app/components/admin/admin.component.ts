@@ -6,7 +6,7 @@ import { Component } from "@angular/core";
     templateUrl: 'app/components/admin/admin.component.html'
 })
 export class Admin {
-    products() {
-        return [{}];
+    constructor() {
+        // ...
     }
 }

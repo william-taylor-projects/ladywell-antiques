@@ -15,6 +15,10 @@ export class AdminProducts {
         // TODO: delete item
     }
 
+    add() {
+        // TODO: add item
+    }
+
     get products() : Item[] {
         return this.model.items;
     }
