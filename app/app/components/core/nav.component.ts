@@ -1,4 +1,5 @@
 
+import * as detect from 'detect-mobile-browser';
 import { Component } from "@angular/core";
 import { Router } from '@angular/router';
 
@@ -8,15 +9,22 @@ import { Router } from '@angular/router';
 })
 export class Nav {
     isNavbarCollapsed: boolean;
+    browser: any;
 
-    constructor() {
+    constructor(private router: Router) {
         this.isNavbarCollapsed = true;
+        this.browser = detect(false);
     }
 
-    get color()  {
-        if(window.location.pathname == '/home')
-            return 'rgba(0, 0, 0, 0.25)';
-        else 
-            return '#81776d';
+    route(): string[] {
+        return !this.browser.isAny() ? ['/login'] : ['/home']
+    }
+
+    accessDashboard() {
+        this.router.navigate(this.route());
+    }
+
+    get color() {
+        return this.router.url == '/home' ? 'rgba(0, 0, 0, 0.25)' : '#81776d';
     }
 }

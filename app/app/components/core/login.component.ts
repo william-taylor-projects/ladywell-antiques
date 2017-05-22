@@ -11,7 +11,7 @@ export class Login {
     private password: string;
 
     constructor(private router: Router) {
-        
+
     }
 
     onUserKey(value: string) {
@@ -23,7 +23,7 @@ export class Login {
     }
 
     login() {
-        if(this.username == 'admin' && this.password == 'secret') {
+        if (this.username == 'admin' && this.password == 'secret') {
             this.router.navigate(['/admin']);
         }
     }

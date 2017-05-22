@@ -14,7 +14,7 @@
             <div class='col-md-8'>
                 <div class='row card-group' >
                     <div class="col-md-6 mb-4" *ngFor="let item of getItems() | byCategory:selectedCategory">
-                        <div class="card" placement="top" ngbTooltip="Tooltip">
+                        <div class="card">
                             <img class="card-img-top img-fluid" src="{{item.img}}">
                             <div class="card-block">
                                 <h4 class="card-title">{{item.title}} : {{item.category.name}}</h4>

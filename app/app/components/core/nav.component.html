@@ -1,9 +1,9 @@
-<nav style='z-index: 100;' class="navbar navbar-toggleable-sm navbar-inverse" [style.background]="color">
+<nav class="navbar navbar-toggleable-sm navbar-inverse navbar-main" [style.background]="color">
     <button (click)="isNavbarCollapsed = !isNavbarCollapsed" class="navbar-toggler navbar-toggler-right hidden-md-up" type="button">
         <span class="navbar-toggler-icon"></span>
     </button>
    
-    <a routerLink="/login" class="navbar-brand" href="#">
+    <a (click)='accessDashboard(); false' class="navbar-brand" href="">
         <img src="icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
         <span class='ml-2'>Ladywell Antiques</span>
     </a>
