@@ -1,13 +1,14 @@
 
-import { AdminNav as adminNav } from "./components/admin-nav.component";
-import { Contact as contact } from './components/contact.component';
-import { Gallery as gallery } from './components/gallery.component';
-import { Items as items } from './components/items.component';
-import { Admin as admin } from './components/admin.component';
-import { Login as login } from './components/login.component';
-import { Home as home } from './components/home.component';
+import { AdminNav as adminNav } from "./components/admin/admin-nav.component";
+import { Admin as admin } from './components/admin/admin.component';
+
+import { Contact as contact } from './components/core/contact.component';
+import { Gallery as gallery } from './components/core/gallery.component';
+import { Items as items } from './components/core/items.component';
+import { Login as login } from './components/core/login.component';
+import { Home as home } from './components/core/home.component';
+import { Nav as nav } from "./components/core/nav.component";
 import { App as app } from "./components/app.component";
-import { Nav as nav } from "./components/nav.component";
 
 export let Contact = contact;
 export let AdminNav = adminNav;
