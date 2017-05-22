@@ -1,5 +1,7 @@
 
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { RouterModule } from "@angular/router";
 import { NgModule } from "@angular/core";
 

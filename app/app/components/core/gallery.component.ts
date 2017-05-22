@@ -1,3 +1,4 @@
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { Component } from "@angular/core";
 
 @Component({
@@ -5,5 +6,7 @@ import { Component } from "@angular/core";
     templateUrl: 'app/components/core/gallery.component.html'
 })
 export class Gallery {
-
+    constructor(config: NgbCarouselConfig) {
+        config.wrap = false;
+    }
 }

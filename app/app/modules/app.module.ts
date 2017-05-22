@@ -6,8 +6,10 @@ import { pipes } from '../all.pipes';
 import { RouteRoutes, AdminRoutes } from '../model/app.routes';
 import { Model } from '../model/app.model';
 
-import { BrowserModule } from "@angular/platform-browser";
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from '@angular/router';
 import { FormsModule } from "@angular/forms";
 import { HttpModule } from '@angular/http';
@@ -20,7 +22,7 @@ import { NgModule } from "@angular/core";
         BrowserModule,
         AdminModule,
     ],
-    providers: [Model],
+    providers: [Model, NgbCarouselConfig],
     declarations:  components().concat(pipes()),
     bootstrap: [App]
 })
