@@ -1,11 +1,35 @@
 import { Component } from "@angular/core";
+import { Http, Headers, RequestOptions } from '@angular/http';
+import { Observable } from 'rxjs/Rx';
+import 'rxjs/add/operator/toPromise';
 
 @Component({
-    selector: "contact", 
+    selector: "contact",
     templateUrl: 'app/components/core/contact.component.html'
 })
 export class Contact {
-    submit(email, password, message) {
-        console.log('Entered', email, password, message);
+    private url = 'http://williamsamtaylor.co.uk:3004/send';
+
+    constructor(private http: Http) {
+        // ...
+    }
+
+    submit(name, email, message) {
+        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let body = {
+            subject: "Ladywell Antiques",
+            message: message,
+            email: email,
+            name: name
+        };
+
+        let options = new RequestOptions({ headers: headers, method: "post" });
+        let promise = this.http.post(this.url, body, options).toPromise()
+
+        promise.then(resp => {
+            console.log('Success ->', resp);
+        }).catch(err => {
+            console.log('Error ->', err);
+        })
     }
 }

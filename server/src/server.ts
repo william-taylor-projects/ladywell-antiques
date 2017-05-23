@@ -17,6 +17,12 @@ app.use(bodyParser.json());
 app.use(compression());
 app.use(cors());
 
+app.post('/send', (req, res) => {
+    console.log('Body:', req.body);
+
+    res.send('Dummy email items')
+});
+
 app.get('/items', (req, res) => {
     res.send('Dummy email items')
 })
