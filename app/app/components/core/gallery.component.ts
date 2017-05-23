@@ -1,5 +1,5 @@
 
-import { GalleryService, GalleryImage } from "../../services/gallery.service";
+import { GalleryService, GalleryImage, CarouselImage } from "../../services/gallery.service";
 import { NgbCarouselConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Component } from "@angular/core";
 
@@ -21,11 +21,15 @@ export class Gallery {
     }
     
     openImage(modal: any, index: number) {
-        this.selectedImage = this.images()[index];
+        this.selectedImage = this.galleryImages()[index];
         this.modalService.open(modal, { size: 'lg' });
     }
 
-    images(): GalleryImage[] {
-        return this.gallery.getImages();
+    carouselImages(): CarouselImage[] {
+        return this.gallery.getCarouselImages();
+    }
+
+    galleryImages(): GalleryImage[] {
+        return this.gallery.getGalleryImages();
     }
 }

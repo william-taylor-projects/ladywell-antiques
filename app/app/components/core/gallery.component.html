@@ -8,32 +8,18 @@
     </div>
 
     <ngb-carousel>
-        <ng-template ngbSlide>
-            <img class='full' src="images/silver1.jpg">
+        <ng-template ngbSlide *ngFor='let image of carouselImages()'>
+            <img class='full' src="{{image.src}}">
             <div class="carousel-caption">
-                <h3>Pots from 1945</h3>
-                <p>Built in a random location bought from a London auction</p>
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <img class='full' src="images/silver3.jpg">
-            <div class="carousel-caption">
-                <h3>Memorial ring from 1830</h3>
-                <p>Chinese memorial ring made in Hong Kong</p>
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <img class='full' src="images/silver2.jpg">
-            <div class="carousel-caption">
-                <h3>Japanese Bowl from 1700</h3>
-                <p>Ancient bronze bowl brought into the UK via traders</p>
+                <h3>{{image.title}}</h3>
+                <p>{{image.desc}}</p>
             </div>
         </ng-template>
     </ngb-carousel>
 
     <ng-template #modal let-c="close" let-d="dismiss">
         <div class="modal-header">
-            <h4 class="modal-title">{{selectedImage.name}}</h4>
+            <h4 class="modal-title">{{selectedImage.title}}</h4>
             <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
             <span aria-hidden="true">&times;</span>
             </button>
@@ -46,9 +32,9 @@
     <div class='container mt-4'>
         <h1>Gallery</h1><hr/>
         <div class="mt-4 row text-center text-lg-left">
-            <div *ngFor='let image of images(); let i = index' class="col-lg-3 col-md-4 col-xs-6">
+            <div *ngFor='let image of galleryImages(); let i = index' class="col-lg-3 col-md-4 col-xs-6">
                 <a (click)='openImage(modal, i); false' href="" class="d-block mb-4 h-100">
-                    <img style="min-width: 100%; height: 200px;" class="img-fluid img-thumbnail" src="{{image.src}}" alt="{{image.name}}">
+                    <img style="min-width: 100%; height: 200px;" class="img-fluid img-thumbnail" src="{{image.src}}" alt="{{image.title}}">
                 </a>
             </div>
         </div>

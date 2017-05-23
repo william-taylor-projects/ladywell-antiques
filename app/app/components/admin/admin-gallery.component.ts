@@ -1,4 +1,5 @@
 
+import { GalleryImage, GalleryService } from '../../services/gallery.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
     templateUrl: 'app/components/admin/admin-gallery.component.html'
 })
 export class AdminGallery {
-    constructor() {
+    constructor(private gallery: GalleryService) {
         // ...
     }
 
@@ -16,5 +17,12 @@ export class AdminGallery {
 
     add() {
         // TODO: add image
+    }
+
+    get images(): GalleryImage[] {
+        let carousel = this.gallery.getCarouselImages() as any[];
+        let gallery = this.gallery.getGalleryImages() as any[];
+
+        return carousel.concat(gallery);
     }
 }
