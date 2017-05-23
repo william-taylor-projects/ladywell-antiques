@@ -43,21 +43,39 @@ body {
 div.center-vertical p {
    margin: 0;
    position: absolute;               
-   top: 45%;                         
+   top: 45%;            
+   padding: 0 2.5% 0 2.5%;          
    transform: translate(0, -50%) 
 }   
+
+@media (min-width: 768px) {
+    div.center-vertical p {
+        padding: 0 10% 0 10%;
+    }   
+} 
+
+@media (min-width: 992px) {
+    div.center-vertical p {
+        padding: 0 15% 0 15%;
+    }    
+} 
+
+@media (min-width: 1200px) {
+    div.center-vertical p {
+        padding: 0 20% 0 20%;
+    }   
+}
 
 .fixed-canvas {
      height: 300px;
 }
 
 .header-page {
-    letter-spacing: 0.075em;
+    letter-spacing: 0.05em;
     color: white;
     font-weight: 100;
     text-align: center;
     font-size: 1.3em;
-    padding: 0 5% 0 5%;
     text-shadow: #000000 2px 2px 2px;
 }
 
