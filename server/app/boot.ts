@@ -1,9 +1,11 @@
 
+import * as metrics from 'appmetrics-dash';
 import * as compression from 'compression';
 import * as bodyParser from 'body-parser';
 import * as express from 'express';
 import * as cors from 'cors';
-import * as metrics from 'appmetrics-dash';
+
+import { shopRoutes } from './router/shop.router';
 
 const dashboardPort = 8000;
 const port = 8080;
@@ -19,17 +21,8 @@ app.use(bodyParser.json());
 app.use(compression());
 app.use(cors());
 
-app.get('/items', (req, res) => {
-    res.send('Dummy shop items')
-})
+app.use('/shop', shopRoutes);
 
-app.get('/gallery', (req, res) => {
-    res.send('Dummy gallery items')
-})
-
-app.post('/email', (req, res) => {
-    res.send('Dummy email items')
-})
 
 app.get('/', (req, res) => {
     res.redirect(`http://localhost:${dashboardPort}/appmetrics-dash`);
