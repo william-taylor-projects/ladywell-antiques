@@ -8,8 +8,8 @@ import * as metrics from 'appmetrics-dash';
 const port = 8080;
 const app = express()
 const dash = metrics.monitor({
-    title: 'Ladywell Antiques Server',
-    port: 8000,
+    title: 'Ladywell Antiques Server'//,
+    //port: 8000,
 });
 
 app.use(express.static(__dirname, { maxAge: '7d' }));
