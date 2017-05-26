@@ -31,6 +31,7 @@
     "typescript": "^2.3.2"
   },
   "scripts": {
+    "test": "echo \"No tests written\" && exit 0",
     "start": "concurrently \"npm run tscwatch\" \"npm run lite\" ",
     "lite": "lite-server",
     "tscwatch": "tsc -w",
