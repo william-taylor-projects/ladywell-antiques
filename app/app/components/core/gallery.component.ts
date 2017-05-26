@@ -11,7 +11,7 @@ export class Gallery {
     private selectedImage: GalleryImage;
 
     constructor(
-        private gallery: GalleryService, 
+        private gallery: GalleryService,
         private config: NgbCarouselConfig,
         private modalService: NgbModal
     ) {
@@ -19,7 +19,7 @@ export class Gallery {
         config.keyboard = true;
         config.wrap = false;
     }
-    
+
     openImage(modal: any, index: number) {
         this.selectedImage = this.galleryImages()[index];
         this.modalService.open(modal, { size: 'lg' });

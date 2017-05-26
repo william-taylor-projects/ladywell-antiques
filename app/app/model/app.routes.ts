@@ -1,6 +1,6 @@
 
-import { App, Home, Gallery, Items, Contact } from '../all.components';
-import { Admin, Login } from '../all.components';
+import { App, Home, Gallery, Items, Contact } from '../includes/all.components';
+import { Admin, Login } from '../includes/all.components';
 import { Routes } from '@angular/router';
 
 export const RouteRoutes: Routes = [

@@ -17,19 +17,19 @@ export class Items {
         this.selectedCategory = category;
     }
 
-    getCategoryCount(cat: Category) : number {
-        if(cat.wildcard) {
+    getCategoryCount(cat: Category): number {
+        if (cat.wildcard) {
             return this.getItems().length;
         } else {
             return this.model.itemsWithCategory(cat);
         }
     }
 
-    getCategories() : Category[] {
+    getCategories(): Category[] {
         return this.model.categories;
     }
 
-    getItems() : Item[] {
+    getItems(): Item[] {
         return this.model.items;
     }
 }

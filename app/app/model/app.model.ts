@@ -67,7 +67,7 @@ export class Model {
         this.categories.unshift(new Category(this.categories.length, "All", true));
     }
 
-    itemsWithCategory(category: Category) : number {
+    itemsWithCategory(category: Category): number {
         let occurances = 0;
         this.items.forEach(item => {
             occurances += item.category == category ? 1 : 0;
@@ -75,11 +75,11 @@ export class Model {
         return occurances;
     }
 
-    wildcardCategory() : Category {
+    wildcardCategory(): Category {
         let wildcard = null;
 
         this.categories.forEach(category => {
-            if(category.wildcard) {
+            if (category.wildcard) {
                 wildcard = category;
             }
         });
