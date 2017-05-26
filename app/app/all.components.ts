@@ -1,45 +1,15 @@
 
-import { AdminProducts as adminProducts } from './components/admin/admin-products.component';
-import { AdminGallery as adminGallery } from './components/admin/admin-gallery.component';
-import { AdminNav as adminNav } from "./components/admin/admin-nav.component";
-import { Admin as admin } from './components/admin/admin.component';
+// Admin components
+export * from './components/admin/admin-products.component';
+export * from './components/admin/admin-gallery.component';
+export * from "./components/admin/admin-nav.component";
+export * from './components/admin/admin.component';
 
-import { Contact as contact } from './components/core/contact.component';
-import { Gallery as gallery } from './components/core/gallery.component';
-import { Items as items } from './components/core/items.component';
-import { Login as login } from './components/core/login.component';
-import { Home as home } from './components/core/home.component';
-import { Nav as nav } from "./components/core/nav.component";
-import { App as app } from "./components/app.component";
-
-export let Contact = contact;
-export let AdminNav = adminNav;
-export let Products = adminProducts;
-export let Gallery = gallery;
-export let Items = items;
-export let Admin = admin;
-export let Login = login;
-export let Home = home;
-export let App = app;
-export let Nav = nav;
-
-export let components = () => {
-    return [
-        App,
-        Nav,
-        Home,
-        Gallery,
-        Items,
-        Contact,
-        Login
-    ]
-}
-
-export let adminComponents = () => {
-    return [
-        Admin,
-        AdminNav,
-        adminProducts,
-        adminGallery
-    ]
-}
+// Core modules
+export * from './components/core/contact.component';
+export * from './components/core/gallery.component';
+export * from './components/core/items.component';
+export * from './components/core/login.component';
+export * from './components/core/home.component';
+export * from "./components/core/nav.component";
+export * from "./components/app.component";

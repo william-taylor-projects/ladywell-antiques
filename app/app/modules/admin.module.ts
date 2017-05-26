@@ -2,7 +2,7 @@
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { adminComponents } from '../all.components';
+import { Admin, AdminNav, AdminProducts, AdminGallery } from '../all.components';
 import { AdminRoutes } from "../model/app.routes";
 
 import { BrowserModule } from "@angular/platform-browser";
@@ -26,7 +26,7 @@ const myProviders = services().concat([Model, NgbCarouselConfig]);
         NgbModule
     ],
     providers: myProviders,
-    declarations: adminComponents(),
+    declarations: [Admin, AdminNav, AdminProducts, AdminGallery],
     exports: []
 })
 export class AdminModule {
