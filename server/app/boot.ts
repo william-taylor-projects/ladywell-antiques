@@ -1,9 +1,9 @@
 
-import * as metrics from 'appmetrics-dash';
-import * as compression from 'compression';
-import * as bodyParser from 'body-parser';
-import * as express from 'express';
-import * as cors from 'cors';
+import compression = require('compression');
+import bodyParser = require('body-parser');
+import metrics = require('appmetrics-dash');
+import express = require('express');
+import cors = require('cors');
 
 import { galleryRoutes } from './router/gallery.router';
 import { emailRoutes } from './router/email.router';
