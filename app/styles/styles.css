@@ -173,12 +173,11 @@ div.center-vertical p {
 .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: rgb(129, 119, 109);/* rgb(154, 154, 154);*/
-    border-color: rgb(129, 119, 109);/* rgb(154, 154, 154);*/
+    background-color: rgb(174, 159, 144);
 }
 
 .badge-default {
-    background-color: rgba(65, 69, 72, 0.68);
+    background-color: rgba(0, 0, 0, 0.42);
 }
 
 @media (min-width: 768px) {

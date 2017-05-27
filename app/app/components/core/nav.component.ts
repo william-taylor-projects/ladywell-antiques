@@ -33,6 +33,6 @@ export class Nav {
     }
 
     get shadow() {
-        return this.homepage() ? 'none;' : '#635f5f 0px 4px 2px;';
+        return '#333 0px 0px 0px'
     }
 }
