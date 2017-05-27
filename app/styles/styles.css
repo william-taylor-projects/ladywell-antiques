@@ -177,7 +177,7 @@ div.center-vertical p {
 }
 
 .badge-default {
-    background-color: rgba(0, 0, 0, 0.42);
+    background-color: rgb(155, 139, 123);
 }
 
 @media (min-width: 768px) {
