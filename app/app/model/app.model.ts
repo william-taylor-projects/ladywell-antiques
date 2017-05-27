@@ -44,13 +44,13 @@ export function randomCategories(): Category[] {
 }
 
 const descPlaceholder = `
-    Here is an example description that is used as a placeholder
-    to do placeholder stuff and other stuff, awesome stuff
+    This silver cup is from 1945 and is in great condition. 
+    Made by XX it was created specifically as part of a set.
 `
 
 export function randomItems(length: number, categories: Category[]): Item[] {
     let items: Item[] = [];
-    let title = "Title";
+    let title = "Product";
     let image = "images/silver.jpg";
     let desc = descPlaceholder;
 

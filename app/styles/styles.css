@@ -67,7 +67,7 @@ div.center-vertical p {
 }
 
 .thin {
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .justify {
@@ -169,8 +169,12 @@ div.center-vertical p {
 .list-group-item.active {
     z-index: 2;
     color: #fff;
-    background-color: rgb(154, 154, 154);
-    border-color: rgb(154, 154, 154);
+    background-color: rgb(129, 119, 109);/* rgb(154, 154, 154);*/
+    border-color: rgb(129, 119, 109);/* rgb(154, 154, 154);*/
+}
+
+.badge-default {
+    background-color: rgba(65, 69, 72, 0.68);
 }
 
 @media (min-width: 768px) {
