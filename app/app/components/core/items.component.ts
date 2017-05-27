@@ -8,13 +8,16 @@ import { Component } from "@angular/core";
 })
 export class Items {
     selectedCategory: Category = null;
+    collapseSearch: boolean;
 
     constructor(private model: Model) {
         this.selectedCategory = model.wildcardCategory();
+        this.collapseSearch = false;
     }
 
     openItem(item: Item) {
-        // TODO: write open item method
+        // TODO: write open modal code
+        alert('HelloWorld');
     }
 
     onSelected(category: Category) {
