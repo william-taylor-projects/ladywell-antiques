@@ -43,11 +43,16 @@ export function randomCategories(): Category[] {
     return categories;
 }
 
+const descPlaceholder = `
+    Here is an example description that is used as a placeholder
+    to do placeholder stuff and other stuff, awesome stuff
+`
+
 export function randomItems(length: number, categories: Category[]): Item[] {
     let items: Item[] = [];
     let title = "Title";
     let image = "images/silver.jpg";
-    let desc = "Here is a very short description to be used.";
+    let desc = descPlaceholder;
 
     for (let i = 0; i < length; i++) {
         items.push(new Item(title, image, desc, randomElement<Category>(categories)));

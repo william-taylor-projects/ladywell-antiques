@@ -13,6 +13,10 @@ export class Items {
         this.selectedCategory = model.wildcardCategory();
     }
 
+    openItem(item: Item) {
+        // TODO: write open item method
+    }
+
     onSelected(category: Category) {
         this.selectedCategory = category;
     }

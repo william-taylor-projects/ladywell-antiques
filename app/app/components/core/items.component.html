@@ -3,7 +3,7 @@
 
     <div class='container-fluid mt-4'>
         <div class='row'>
-            <div class='col-md-3 hidden-sm-down'>
+            <div class='col-md-3 col-xs-12 mb-4'>
                 <ul class="list-group">
                     <li [class.active]='category == selectedCategory' *ngFor="let category of getCategories()" style='cursor: pointer;' (click)='onSelected(category)' class="list-group-item list-group-item-action justify-content-between">
                         {{category.name}}
@@ -17,9 +17,9 @@
                         <div class="card">
                             <img class="card-img-top img-fluid" src="{{item.img}}">
                             <div class="card-block">
-                                <h4 class="card-title">{{item.title}} : {{item.category.name}}</h4>
-                                <p class="card-text">{{item.description}}</p>
-                                <a href="" class="btn btn-primary">View</a>
+                                <h4 class="card-title">{{item.title}} <span class='pull-right thin'>{{item.category.name}}</span></h4>
+                                <p class="card-text justify">{{item.description}}</p>
+                                <button (click)='openItem(item)' href="" class="btn btn-default">View</button>
                             </div>
                         </div>
                     </div>

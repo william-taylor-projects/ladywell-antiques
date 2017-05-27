@@ -66,6 +66,14 @@ div.center-vertical p {
     }   
 }
 
+.thin {
+    font-weight: 200;
+}
+
+.justify {
+    text-align: justify;
+}
+
 .fixed-canvas {
      height: 300px;
 }
