@@ -18,14 +18,14 @@
     </ngb-carousel>
 
     <ng-template #modal let-c="close" let-d="dismiss">
+        <div>
+            <img class="img-cover" src='{{selectedImage.src}}' />
+        </div>
         <div class="modal-header">
-            <h4 class="modal-title">{{selectedImage.title}}</h4>
+            <h4 class="modal-title pull-left">{{selectedImage.title}}</h4>
             <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
             <span aria-hidden="true">&times;</span>
             </button>
-        </div>
-        <div>
-            <img class="img-cover" src='{{selectedImage.src}}' />
         </div>
     </ng-template>
 
