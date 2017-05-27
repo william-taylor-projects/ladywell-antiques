@@ -66,6 +66,10 @@ div.center-vertical p {
     }   
 }
 
+.navbar-shadow {
+    box-shadow: #635f5f 0px 4px 2px;
+}
+
 .thin {
     font-weight: 300;
 }

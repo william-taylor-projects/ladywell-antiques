@@ -24,7 +24,15 @@ export class Nav {
         this.router.navigate(this.route());
     }
 
+    homepage() : boolean {
+        return this.router.url == '/home';
+    }
+
     get color() {
-        return this.router.url == '/home' ? 'rgba(0, 0, 0, 0.25)' : '#81776d';
+        return this.homepage() ? 'rgba(0, 0, 0, 0.25)' : '#81776d';
+    }
+
+    get shadow() {
+        return this.homepage() ? 'none;' : '#635f5f 0px 4px 2px;';
     }
 }
