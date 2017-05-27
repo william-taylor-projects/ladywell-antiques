@@ -21,11 +21,13 @@ export class Item {
     description: string;
     category: Category;
     title: string;
+    price: number;
     img: string;
 
-    constructor(title: string, img: string, desc: string, cat: Category) {
+    constructor(title: string, img: string, desc: string, cat: Category, price: number) {
         this.category = cat;
         this.description = desc;
+        this.price = price;
         this.title = title;
         this.img = img;
     }
@@ -53,9 +55,11 @@ export function randomItems(length: number, categories: Category[]): Item[] {
     let title = "Product";
     let image = "images/silver.jpg";
     let desc = descPlaceholder;
+    let price = 10.0;
 
     for (let i = 0; i < length; i++) {
-        items.push(new Item(title, image, desc, randomElement<Category>(categories)));
+        const randomCategory = randomElement<Category>(categories);
+        items.push(new Item(title, image, desc, randomCategory, price));
     }
 
     return items;

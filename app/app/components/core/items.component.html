@@ -17,7 +17,7 @@
                         <div class="card">
                             <img class="card-img-top img-fluid" src="{{item.img}}">
                             <div class="card-block">
-                                <h4 class="card-title">{{item.title}} <span class='pull-right thin'>{{item.category.name}}</span></h4>
+                                <h4 class="card-title">{{item.title}} <span class='pull-right thin'>{{item.price | currency:'GBP':true}}</span></h4>
                                 <p class="card-text justify">{{item.description}}</p>
                                 <button (click)='openItem(item)' href="" class="btn btn-default">View</button>
                             </div>
