@@ -32,6 +32,8 @@ export class Items {
         this.selectedItem = item;
         this.dialog.open(model, modelOptions).result.then(() => {
             // TODO: Handle modal close
+        }).catch(err => {
+            console.error(err);
         });
     }
 
