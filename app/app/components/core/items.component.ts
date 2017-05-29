@@ -1,5 +1,5 @@
 
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
 import { Model, Category, Item } from '../../model/app.model';
 import { Component } from "@angular/core";
 
@@ -9,6 +9,7 @@ import { Component } from "@angular/core";
 })
 export class Items {
     selectedCategory: Category = null;
+    selectedItem: Item = null;
     collapseSearch: boolean;
 
     constructor(private model: Model, private dialog: NgbModal) {
@@ -16,9 +17,21 @@ export class Items {
         this.collapseSearch = false;
     }
 
+    buy(item: Item) {
+        if (item != null) {
+            window.open("https://www.ebay.co.uk", '_blank');
+        }
+    }
+
     openItem(model: any, item: Item) {
-        this.dialog.open(model, { size: 'lg' }).result.then(() => {
-            console.log('Closing modal');
+        let modelOptions: NgbModalOptions = {
+            backdrop: 'static',
+            size: 'lg'
+        };
+
+        this.selectedItem = item;
+        this.dialog.open(model, modelOptions).result.then(() => {
+            // TODO: Handle modal close
         });
     }
 
