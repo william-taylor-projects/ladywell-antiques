@@ -14,6 +14,10 @@ export class Contact {
         // ...
     }
 
+    clear(elements) {
+        elements.forEach(div => div.value = "");
+    }
+
     submit(name, email, message) {
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let body = {

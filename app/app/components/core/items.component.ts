@@ -1,4 +1,5 @@
 
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Model, Category, Item } from '../../model/app.model';
 import { Component } from "@angular/core";
 
@@ -10,14 +11,15 @@ export class Items {
     selectedCategory: Category = null;
     collapseSearch: boolean;
 
-    constructor(private model: Model) {
+    constructor(private model: Model, private dialog: NgbModal) {
         this.selectedCategory = model.wildcardCategory();
         this.collapseSearch = false;
     }
 
-    openItem(item: Item) {
-        // TODO: write open modal code
-        alert('HelloWorld');
+    openItem(model: any, item: Item) {
+        this.dialog.open(model, { size: 'lg' }).result.then(() => {
+            console.log('Closing modal');
+        });
     }
 
     onSelected(category: Category) {
