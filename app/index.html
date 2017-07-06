@@ -16,7 +16,8 @@
     <script src='./node_modules/core-js/client/shim.min.js'></script>  <!-- JS API polyfill -->  
     <script src='./node_modules/systemjs/dist/system.src.js'></script> <!-- Module loader -->
     <script src='./node_modules/zone.js/dist/zone.min.js'></script> <!-- Zones dependency  -->
-
+    <script>window.module = 'aot';</script>
+    
     <base href="/">
   </head>
   <body>  

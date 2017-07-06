@@ -4,7 +4,8 @@ import { Router } from "@angular/router";
 
 @Component({
     selector: "login",
-    templateUrl: 'app/components/core/login.component.html'
+    moduleId: module.id,
+    templateUrl: './login.component.html'
 })
 export class Login {
     private username: string;

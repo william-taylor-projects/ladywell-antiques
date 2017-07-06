@@ -5,7 +5,8 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: "items",
-    templateUrl: 'app/components/core/items.component.html'
+    moduleId: module.id,
+    templateUrl: './items.component.html'
 })
 export class Items {
     selectedCategory: Category = null;

@@ -3,12 +3,11 @@ var map = {
     'detect-mobile-browser': 'node_modules/detect-mobile-browser/detect-browser.js',
     '@angular': 'node_modules/@angular',
     '@ng-bootstrap/ng-bootstrap': 'node_modules/@ng-bootstrap/ng-bootstrap/bundles/ng-bootstrap.js', 
-    'rxjs': 'node_modules/rxjs',
-    'build': 'build'
+    'rxjs': 'node_modules/rxjs'
 };
 
 var packages = {
-    'build': { main: 'app.boot.js', defaultExtension: 'js' },
+    'app': { main: 'app.boot.js', defaultExtension: 'js' },
     'rxjs': { defaultExtension: 'js' }
 };
 
@@ -31,6 +30,6 @@ function packUmd(pkgName) {
 var setPackageConfig = packUmd;
 ngPackageNames.forEach(setPackageConfig);
 System.config({ map: map, packages: packages });
-System.import("build/app.boot").catch(function(err) {
+System.import("app/boot").catch(function(err) {
     console.error(err);
 });

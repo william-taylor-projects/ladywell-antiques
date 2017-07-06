@@ -5,7 +5,8 @@ import 'rxjs/add/operator/toPromise';
 
 @Component({
     selector: "contact",
-    templateUrl: 'app/components/core/contact.component.html'
+    moduleId: module.id,
+    templateUrl: './contact.component.html'
 })
 export class Contact {
     private url = 'http://williamsamtaylor.co.uk:3004/send';
