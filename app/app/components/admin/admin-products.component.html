@@ -1,0 +1,48 @@
+<div class="card mt-4 p-4 mb-4">
+    <h3 class="card-header">Products</h3>
+    <p style='margin-bottom: 0rem;' class="p-3">
+        Add and remove products that can be seen from the shop section of the website. Be careful as actions can't be undone!
+    </p>
+    <div class="card-block">
+        <h4 class='mb-4'>Add Product</h4>
+        <form class='mb-3'>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Name...">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Price...">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" placeholder="Description..." rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="file" class="form-control-file">
+                <small id="fileHelp" class="form-text text-muted">Upload Product Image</small>
+            </div>
+             <button type="submit" class="btn btn-primary text-right">Add</button>
+        </form>
+        <h4 class='mt-5 mb-4'>Remove Product</h4>
+        <table class="table table-hover table-sm">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let product of products; let i = index'>
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{product.title}}</td>
+                    <td>{{product.category.name}}</td>
+                    <td>
+                        <button (click)='delete(product, i); false' type="button" class="close" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,281 @@
+.fill-canvas {
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: fixed;
+    z-index:-500;
+    min-width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+body {
+    font-family:  'Muli', -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #292b2c;
+    background-color: #fff;
+}
+
+#location {
+    letter-spacing: 0;
+    font-size: 70%;
+    text-shadow: white 2px 2px 0px;
+    color: black;
+}
+
+#header {
+    font-size: 2.0em;
+    font-weight: 600;
+}
+
+#text {
+    font-size: 1.0em;
+    font-weight: 300;
+}
+
+.div.center-vertical {
+   height: 10em;
+   position: relative 
+}              
+
+div.center-vertical p {
+   margin: 0;
+   position: absolute;               
+   top: 45%;            
+   padding: 0 2.5% 0 2.5%;          
+   transform: translate(0, -50%) 
+}   
+
+@media (min-width: 768px) {
+    div.center-vertical p {
+        padding: 0 10% 0 10%;
+    }   
+} 
+
+@media (min-width: 992px) {
+    div.center-vertical p {
+        padding: 0 15% 0 15%;
+    }    
+} 
+
+@media (min-width: 1200px) {
+    div.center-vertical p {
+        padding: 0 20% 0 20%;
+    }   
+}
+
+.navbar-shadow {
+    box-shadow: #635f5f 0px 4px 2px;
+}
+
+.thin {
+    font-weight: 300;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.fixed-canvas {
+     height: 300px;
+}
+
+.header-page {
+    letter-spacing: 0.05em;
+    color: white;
+    font-weight: 100;
+    text-align: center;
+    font-size: 1.3em;
+    text-shadow: #000000 2px 2px 2px;
+}
+
+.bg-inverse {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+    background: #333;
+    -webkit-animation: load1 1s infinite ease-in-out;
+    animation: load1 1s infinite ease-in-out;
+    width: 1em;
+    height: 4em;
+}
+.loader {
+    color: #333;
+    text-indent: -9999em;
+    margin: 88px auto;
+    position: relative;
+    font-size: 11px;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+    position: absolute;
+    top: 0;
+    content: '';
+}
+.loader:before {
+    left: -1.5em;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+.loader:after {
+    left: 1.5em;
+}
+@-webkit-keyframes load1 {
+    0%,
+    80%,
+    100% {
+    box-shadow: 0 0;
+    height: 4em;
+    }
+    40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+    }
+}
+@keyframes load1 {
+    0%,
+    80%,
+    100% {
+    box-shadow: 0 0;
+    height: 4em;
+    }
+    40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+    }
+}
+
+.btn-link:focus, .btn-link:hover {
+    color: #fff !important;
+    text-decoration: none !important;
+    background-color: rgba(158, 150, 150, 0.38) !important;
+    border-color: white;
+    cursor: pointer;
+}
+
+.btn-link {
+    font-weight: normal;
+    color: #fff;
+    border-radius: 5;
+    border-color: #ddd;
+}
+
+.list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: rgb(174, 159, 144);
+}
+
+.badge-default {
+    background-color: rgb(155, 139, 123);
+}
+
+@media (min-width: 768px) {
+    .container-small {
+        width: 300px;
+    }
+    .container-large {
+        width: 970px;
+    } 
+} 
+
+@media (min-width: 992px) {
+    .container-small {
+        width: 500px;
+    }
+    .container-large {
+        width: 1170px;
+    } 
+} 
+
+@media (min-width: 1200px) {
+    .container-small {
+        width: 700px;
+    }
+    .container-large {
+        width: 1500px;
+    } 
+}
+
+.container-small, .container-large {
+    max-width: 100%;
+}
+
+#admin {
+    background:#f1eeee;
+    height:100%;
+}
+
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 0px solid #eceeef;
+}
+
+.navbar-main {
+    z-index: 100;
+}
+
+.img-cover {
+    /*object-fit: cover;*/
+    width: 100%;
+    height: auto;
+    max-height: 75vh;
+}
+
+button:focus {
+    outline:0;
+}
+
+a:focus {
+    outline:0;
+}
+
+.modal-brown-header {
+    background: rgb(129, 119, 109);
+    z-index: 5;
+    color: white;
+    box-shadow: #5e5b5b 0px 1.5px 0px;
+    border-bottom: none;
+}
+
+.modal-content {
+    border:none;
+    border-radius: 0px;
+}
+
+.full {
+    position: static;
+    left: 0;
+    top: 0;
+    min-width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+
+.img-cover {
+    min-width: 100%;
+    object-fit: cover;
+}

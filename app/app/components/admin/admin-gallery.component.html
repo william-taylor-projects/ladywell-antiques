@@ -1,0 +1,50 @@
+<div id='gallery'>
+    <div class="card mt-4 p-4 mb-4">
+        <h3 class="card-header">Gallery</h3>
+        <p style='margin-bottom: 0rem;' class="p-3">
+            Upload and remove images from the Gallery section of the website. Be careful as actions can't be undone!
+        </p>
+        <div class="card-block">
+            <h4 class='mb-4'>Add Image</h4>
+            <form class='mb-3'>
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Title">
+                </div>
+                 <div class="form-check pull-right">
+                    <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Carousel
+                    </label>
+                </div>
+                <div class="form-group">
+                    <input type="file" class="form-control-file">
+                    <small id="fileHelp" class="form-text text-muted">Upload Image</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+            <h4 class='mt-5 mb-4'>Remove Image</h4>
+            <table class="table table-hover table-sm">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Type</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let image of images; let i = index'>
+                        <th scope="row">{{i+1}}</th>
+                        <td>{{image.title}}</td>
+                        <td>{{image.desc ? 'Carousel' : 'Gallery'}}</td>
+                        <td>
+                            <button (click)='delete(image, i); false' type="button" class="close" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
