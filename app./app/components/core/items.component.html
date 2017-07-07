@@ -1,0 +1,131 @@
+<div id='items'>
+    <nav-bar></nav-bar>
+
+    <ng-template #content let-c="close" let-d="dismiss">
+        <div class="modal-header modal-brown-header">
+            <img src="icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+            <h4 class="modal-title">{{selectedItem.title}}</h4>
+            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <span style="color: white; opacity: 1; text-shadow: none;" aria-hidden="true">&times;</span>
+    </button>
+        </div>
+        <div class="modal-body" style='padding: 0px;'>
+            <div class='row'>
+                <div class='col-8'>
+                    <ngb-carousel>
+                        <ng-template ngbSlide>
+                            <img class='img-cover' style='height: 300px;' src="{{selectedItem.img}}">
+                            <div class="carousel-caption">
+                                <h3>First slide label</h3>
+                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            </div>
+                        </ng-template>
+                        <ng-template ngbSlide>
+                            <img class='img-cover' style='height: 300px;' src="{{selectedItem.img}}">
+                            <div class="carousel-caption">
+                                <h3>Second slide label</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </ng-template>
+                        <ng-template ngbSlide>
+                            <img class='img-cover' style='height: 300px;' src="{{selectedItem.img}}">
+                            <div class="carousel-caption">
+                                <h3>Third slide label</h3>
+                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            </div>
+                        </ng-template>
+                    </ngb-carousel>
+                </div>
+                <div class='col-4 p-4 mt-2'>
+                    <h5>Category:</h5>
+                    <p>{{selectedItem.category.name}}</p>
+                    <h5>Condition:</h5>
+                    <p>Excellent</p>
+                    <h5>Price:</h5>
+                    <p>{{selectedItem.price | currency:'GBP':true}}</p>
+                </div>
+                <div class='col-12 p-4'>
+                    <h5><b>Description</b></h5>
+                    <p style='margin-bottom:0px;'>{{selectedItem.description.repeat(5)}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" (click)="buy(selectedItem)">Buy</button>
+            <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+        </div>
+    </ng-template>
+
+    <div class='container-fluid'>
+        <div class='row mb-5'>
+            <div class='col-md-4 col-lg-3 pt-3'>
+                <div class='card'>
+                    <div class="card-block">
+                        <h4 class="card-title">
+                            Filters
+                            <a href='#' (click)='collapseSearch = !collapseSearch; false' class="btn btn-secondary btn-sm pull-right">
+                                {{ !collapseSearch ? 'Hide' : 'Show' }}
+                            </a>
+                        </h4>
+                        <hr />
+                        <div class='mt-4' [ngbCollapse]="collapseSearch">
+                            <ul class="list-group">
+                                <li [class.active]='category == selectedCategory' *ngFor="let category of getCategories()" style='cursor: pointer; border: 0px solid black; border-radius: 0;'
+                                    (click)='onSelected(category)' class="list-group-item list-group-item-action justify-content-between">
+                                    {{category.name}}
+                                    <span class="badge badge-default badge-pill">{{getCategoryCount(category)}}</span>
+                                </li>
+                            </ul>
+                            <hr/>
+                            <form class='mt-4'>
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-6 col-form-label">Name:</label>
+                                    <div class="col-6">
+                                        <input class="form-control" value='' placeholder="Name" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-6 col-form-label">Min Price:</label>
+                                    <div class="col-6">
+                                        <input class="form-control" value='0.00' type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-6 col-form-label">Max Price:</label>
+                                    <div class="col-6">
+                                        <input class="form-control" value='100.0' type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label for="example-text-input" class="col-6 col-form-label">Condition:</label>
+                                    <div class="col-6">
+                                        <select class="form-control" id="exampleSelect2">
+                                            <option>Any</option>
+                                            <option>Good</option>
+                                            <option>Poor</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-8 col-lg-9 pt-3'>
+                <div class='row card-group'>
+                    <div class="col-md-6 col-lg-4 mb-4" *ngFor="let item of getItems() | byCategory:selectedCategory">
+                        <div class="card">
+                            <img class="card-img-top img-fluid" src="{{item.img}}">
+                            <div class="card-block">
+                                <h4 class="card-title">{{item.title}} <span class='pull-right thin'>{{item.price | currency:'GBP':true}}</span></h4>
+                                <p class="card-text">{{item.description}}</p>
+                                <button (click)='openItem(content, item)' href="" class="btn btn-default">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

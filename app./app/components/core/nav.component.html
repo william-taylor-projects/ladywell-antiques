@@ -1,0 +1,30 @@
+<nav class="navbar navbar-fixed-top navbar-inverse navbar-toggleable-sm navbar-main" 
+    [style.background]="color"
+    [style.box-shadow]="shadow"
+>
+    <button (click)="isNavbarCollapsed = !isNavbarCollapsed" class="navbar-toggler navbar-toggler-right hidden-md-up" type="button">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+   
+    <a (click)='accessDashboard(); false' class="navbar-brand" href="">
+        <img src="icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <span class='ml-2'>Ladywell Antiques</span>
+    </a>
+
+    <div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item pull-xs-right">
+                <a class="nav-link" href="#" routerLink="/home" routerLinkActive="active">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" routerLink="/items" routerLinkActive="active">Shop</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" routerLink="/gallery" routerLinkActive="active">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" routerLink="/contact" routerLinkActive="active">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>

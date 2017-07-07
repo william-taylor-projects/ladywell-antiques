@@ -5,8 +5,7 @@ import { Router } from '@angular/router';
 
 @Component({
     selector: "nav-bar",
-    moduleId: module.id,
-    templateUrl: './nav.component.html'
+    templateUrl: 'app/components/core/nav.component.html'
 })
 export class Nav {
     isNavbarCollapsed: boolean;

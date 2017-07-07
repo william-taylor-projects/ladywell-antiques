@@ -4,8 +4,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'gallery',
-    moduleId: module.id,
-    templateUrl: './admin-gallery.component.html'
+    templateUrl: 'app/components/admin/admin-gallery.component.html'
 })
 export class AdminGallery {
     constructor(private gallery: GalleryService) {
