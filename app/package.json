@@ -6,43 +6,32 @@
     "@angular/animations": "4.0.0",
     "@angular/common": "4.0.0",
     "@angular/compiler": "4.0.0",
-    "@angular/compiler-cli": "4.0.0",
     "@angular/core": "4.0.0",
     "@angular/forms": "4.0.0",
     "@angular/http": "4.0.0",
     "@angular/platform-browser": "4.0.0",
     "@angular/platform-browser-dynamic": "4.0.0",
-    "@angular/platform-server": "4.0.0",
     "@angular/router": "4.0.0",
-    "@angular/tsc-wrapped": "4.0.0",
-    "@angular/upgrade": "4.0.0",
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.26",
-    "bootstrap": "4.0.0-alpha.6",
     "core-js": "2.4.1",
     "detect-mobile-browser": "^5.0.0",
-    "font-awesome": "^4.7.0",
     "reflect-metadata": "^0.1.10",
     "rxjs": "5.2.0",
     "zone.js": "0.8.5"
   },
   "devDependencies": {
+    "@ngtools/webpack": "^1.5.0",
     "angular2-template-loader": "^0.6.2",
     "awesome-typescript-loader": "^3.2.1",
-    "concurrently": "^3.0.0",
-    "html-loader": "^0.4.5",
     "lite-server": "^2.2.2",
     "raw-loader": "^0.5.1",
-    "ts-loader": "^2.2.2",
     "typescript": "2.3.0",
     "webpack": "^3.0.0"
   },
   "scripts": {
-    "test": "echo \"No tests written\" && exit 0",
-    "start": "concurrently \"tsc -w\" \"lite-server\" ",
-    "roll": "rollup -c rollup-config.js",
+    "build": "webpack --config webpack.config.js",
+    "build:prod": "webpack --config webpack.config.js --env.MODE=prod",
     "lite": "lite-server",
-    "tscwatch": "tsc -w",
-    "tsc": "tsc",
-    "ngc": "ngc -p tsconfig-aot.json"
+    "test": "echo \"No tests written\" && exit 0"
   }
 }
